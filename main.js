@@ -29,7 +29,9 @@ function gotPoses(results){
 function draw(){
     background('grey');
     document.getElementById("square_side").innerHTML = "Largura e altura serão = "+difference+"px";
-    fill('cyan');
-    stroke('blue');
+   textSize(32);
+text('word', 10, 30);
+fill(0, 102, 153);
+
     square(noseX, noseY, difference);
 }
