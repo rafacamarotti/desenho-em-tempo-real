@@ -1,5 +1,4 @@
-noseX=0;
-noseY=0;
+
 difference=0;
 rightWristX=0;
 LeftWristX=0;
@@ -17,9 +16,6 @@ function modelLoaded(){
 function gotPoses(results){
     if(results.length >0){
         console.log(results);
-        noseX = results[0].pose.nose.x;
-        noseY = results[0].pose.nose.y;
-        console.log("noseX = "+noseX+" noseY = "+noseY);
         LeftWristX= results[0].pose.leftWrist.x;
         rightWristX= results[0].pose.rightWrist.x;
         difference= floor(LeftWristX - rightWristX);
@@ -29,9 +25,9 @@ function gotPoses(results){
 function draw(){
     background('grey');
     document.getElementById("square_side").innerHTML = "Largura e altura serão = "+difference+"px";
-   textSize(32);
+   textSize(difference);
 text('word', 10, 30);
 fill(0, 102, 153);
 
-    square(noseX, noseY, difference);
+    
 }
