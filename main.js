@@ -26,7 +26,7 @@ function draw(){
     background('grey');
     document.getElementById("square_side").innerHTML = "Largura e altura serão = "+difference+"px";
    textSize(difference);
-text('word', 10, 30);
+text('word', 100, 150);
 fill(0, 102, 153);
 
     
